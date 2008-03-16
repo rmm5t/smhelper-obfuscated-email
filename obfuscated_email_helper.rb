@@ -1,5 +1,6 @@
-# COPYRIGHT: 2008 Ryan McGeary (ryanonruby -[at]- mcgeary [*dot*] org)
-# LICENSE: MIT (http://en.wikipedia.org/wiki/MIT_License)
+# Copyright (C) 2008 Ryan McGeary (ryanonruby -[at]- mcgeary [*dot*] org)
+# MIT License (http://en.wikipedia.org/wiki/MIT_License)
+# http://github.com/rmm5t/smhelper-obfuscated-email/tree/master
 #
 # This makes it easy to protect email addresses from spam bots by converting
 # plain text email links into a bit of obfuscated javascript.  Disclaimer: This
