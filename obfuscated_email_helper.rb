@@ -12,7 +12,7 @@
 #   obfuscated_mail_to "no.spam@example.com", nil, :class => "email"
 #
 # Outputs:
-#   <script type="text/javascript">
+#   <script language="javascript" type="text/javascript">
 #     document.write(String.fromCharCode(204-144,241-144,176-144, ... ,206-144));
 #   </script>
 module ObfuscatedEmailHelper
@@ -25,7 +25,7 @@ module ObfuscatedEmailHelper
     chars, random = [], rand(255)
     plain = link(title, href, options)
     plain.each_byte { |c| chars << "#{c + random}-#{random}" }
-    tag(:script, :type => "text/javascript") do
+    tag(:script, :language => "javascript", :type => "text/javascript") do
       "document.write(String.fromCharCode(#{chars.join(',')}));"
     end
   end
