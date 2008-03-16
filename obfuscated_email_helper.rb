@@ -10,6 +10,11 @@
 #   obfuscated_mail_to "no.spam@example.com"
 #   obfuscated_mail_to "no.spam@example.com", "Contact me"
 #   obfuscated_mail_to "no.spam@example.com", nil, :class => "email"
+#
+# Outputs:
+#   <script type="text/javascript">
+#     document.write(String.fromCharCode(204-144,241-144,176-144, ... ,206-144));
+#   </script>
 module ObfuscatedEmailHelper
   def obfuscated_mail(email, title = email, options = {})
     obfuscated_link(title || email, "mailto:#{email}", options)
